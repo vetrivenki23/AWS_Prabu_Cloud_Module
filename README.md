@@ -21,7 +21,7 @@ module "techlearnings_aws_ec2" {
 }
 ```
 
-## Input Variables
+Input Variables
 ---------------
 
 This module supports the following input variables:
