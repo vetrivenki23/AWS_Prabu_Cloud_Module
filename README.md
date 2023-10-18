@@ -38,7 +38,11 @@ This module supports the following input variables:
 Outputs
 -------
 
-This module does not define any outputs.
+This module defines the following output variable:
+
+*   `public_ip`: The public IP address of the created EC2 instance.
+
+You can access the public IP address in your Terraform code by referencing `module.techlearnings_aws_ec2.public_ip`.
 
 Authors
 -------
