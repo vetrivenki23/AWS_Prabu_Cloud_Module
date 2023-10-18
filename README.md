@@ -47,4 +47,4 @@ You can access the public IP address in your Terraform code by referencing `modu
 Authors
 -------
 
-*   Venkatesan Vetrimurasu
+*   Prabu
