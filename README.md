@@ -1,27 +1,18 @@
-# Terraform AWS EC2 Instance
+# Terraform Module: AWS S3 Website
 
-This Terraform code deploys an Amazon Elastic Compute Cloud (EC2) instance in AWS. You can use this code as a starting point to launch EC2 instances with specific configurations.
-
-## Prerequisites
-
-Before you begin, ensure you have the following prerequisites:
-
-- [Terraform](https://www.terraform.io/downloads.html) installed on your local machine.
-- AWS credentials properly configured. You can use the [AWS CLI](https://aws.amazon.com/cli/) to set up your credentials.
+This Terraform module creates an S3 bucket in AWS for hosting a static website. You can use this module to provision an S3 bucket with the necessary configuration for website hosting.
 
 ## Usage
 
-1. Clone this repository or copy the `tf_ec2` resource block into your Terraform configuration file.
-
-2. Customize the `ami` and `instance_type` variables in the resource block according to your requirements. You can also modify other resource attributes as needed.
+To use this module in your Terraform configuration, include the following block:
 
 ```hcl
-resource "aws_instance" "tf_ec2" {
-  ami           = var.ec2_ami
-  instance_type = var.ec2_type
-  user_data     = file("userdata.sh")
+module "website_s3_bucket" {
+  source = "app.terraform.io/hcta-demo1/s3-website/aws"
+  version = "1.0.1"
 
+  bucket_name = "my-website-bucket"
   tags = {
-    Name = "Prabu-EC2Cloud"
+    Name = "My Website Bucket"
   }
 }
