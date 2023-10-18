@@ -18,11 +18,11 @@ module "techlearnings_aws_ec2" {
   tags = {
     Name = "TechLearnings-EC2"  # Customize the tag values as needed
   }
-}
+}   
 
-In this block, you should specify the desired `ami`, `instance_type`, `user_data`, and any additional tags according to your requirements. Make sure that the `source` and `version` values match your module's location and version.
+In this block, you should specify the desired `ami`, `instance_type`, `user_data`, and any additional tags according to your requirements. Make sure that the `source` and `version` values match your module's location and version.  
 
-Input Variables
+##Input Variables
 ---------------
 
 This module supports the following input variables:
@@ -36,12 +36,12 @@ This module supports the following input variables:
 *   `tags` (Optional): A map of tags to apply to the EC2 instance.
     
 
-Outputs
+##Outputs
 -------
 
 This module does not define any outputs.
 
-Authors
+##Authors
 -------
 
 *   Venkatesan Vetrimurasu
